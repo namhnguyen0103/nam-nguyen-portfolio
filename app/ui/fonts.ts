@@ -1,0 +1,11 @@
+import { Bricolage_Grotesque, Nunito_Sans } from 'next/font/google';
+ 
+export const brand = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-brand",
+});
+
+export const sans = Nunito_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
