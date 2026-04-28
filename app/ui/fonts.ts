@@ -1,9 +1,10 @@
-import { Bricolage_Grotesque, Nunito_Sans } from 'next/font/google';
- 
-export const brand = Bricolage_Grotesque({
+import { Nunito_Sans, Capriola } from 'next/font/google';
+
+export const brand = Capriola({
+  weight: ["400"],
   subsets: ["latin"],
-  variable: "--font-brand",
-});
+  variable: "--font-brand"
+})
 
 export const sans = Nunito_Sans({
   subsets: ["latin"],
