@@ -28,13 +28,13 @@ export default function CopyLinkButton({ link }: CopyLinkButtonProps) {
   return (
     <button 
       onClick={handleCopy}
-      className='active:scale-97 cursor-copy'
+      className='cursor-copy'
     >
         <div className={
             clsx("group flex items-center px-[8px] py-[2px] ring-inset ring-1 rounded gap-[4px]",
                 {
-                    "ring-gray-300": copied === false,
-                    "ring-blue-300": copied === true
+                    "ring-gray-200": copied === false,
+                    "ring-blue-400": copied === true
                 }
             )
         }>

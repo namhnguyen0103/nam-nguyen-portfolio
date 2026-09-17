@@ -16,7 +16,7 @@ export default function AccordionCard({ header, content } : AccordionCardProps) 
     }
     
     return (
-        <button className='w-full group cursor-pointer active:scale-99' onClick={userClick}>
+        <button className='w-full group cursor-pointer' onClick={userClick}>
             <div className='py-[16px] px-[16px] rounded-xl ring-[2px] ring-gray-50 ring-inset'>
                 <div>{header}</div>
                 <div className={expanded ? "block" : "hidden"}>{content}</div>

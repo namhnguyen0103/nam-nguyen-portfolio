@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* PROJECT SECTION */}
       <div className="mb-[32px]">
-          <h2 className="text-title-L-brand text-blue-500 mb-[16px]">My Projects</h2>
+          <h2 className="text-title-L-brand mb-[16px]">My Projects</h2>
           <div className="flex flex-col gap-[8px]">
             {projects.map((proj) => <ProjectCard key={proj.name} name={proj.name} description={proj.description} img={proj.img} tags={proj.tags}/>)}
           </div>
@@ -56,7 +56,7 @@ export default function Home() {
 
       {/* WORK EXPERIENCE SECTION */}
       <div className="mb-[32px]">
-        <h2 className="text-title-L-brand text-blue-500 mb-[16px]">Work Experience</h2>
+        <h2 className="text-title-L-brand mb-[16px]">Work Experience</h2>
         <div className="flex flex-col gap-[8px]">
           <AccordionCard 
           header={
@@ -72,7 +72,7 @@ export default function Home() {
           } 
           content={
             <div className="pt-[16px] text-body-S-general text-left">
-              <ul className="list-disc pl-4">
+              <ul className="list-disc pl-6">
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
                 <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</li>
                 <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</li>
@@ -93,7 +93,7 @@ export default function Home() {
           } 
           content={
             <div className="pt-[16px] text-body-S-general text-left">
-              <ul className="list-disc pl-4">
+              <ul className="list-disc pl-6">
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
                 <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</li>
                 <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</li>
@@ -105,7 +105,7 @@ export default function Home() {
 
       {/* CONTACTS SECTION */}
       <div className="mb-[32px]">
-        <h2 className="text-title-L-brand text-blue-500 mb-[16px]">Contacts</h2>
+        <h2 className="text-title-L-brand mb-[16px]">Contacts</h2>
         <div className="flex gap-[12px] items-end mb-[16px]">
           <div className="relative w-[96px] h-[120px] rounded-t-full overflow-hidden">
             <Image src="/Nam_Nguyen_Headshot.jpg" fill alt="Headshot" className="object-cover"/>
@@ -126,11 +126,28 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="px-[20px] py-[16px] rounded-xl bg-gray-50">
-          <p className="text-label-S-general text-gray-700">Name</p>
-          <input type="text" placeholder="Your name" className="ring-[1px] ring-inset ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-[8px] py-[4px] focus:ring-blue-300 focus:outline-none"/>
+        <div className="px-[20px] py-[16px] rounded-xl bg-gray-20 ring-[1px] ring-gray-50">
+          <div className="flex w-full gap-[12px]">
+            <div className="w-full">
+              <p className="text-label-S-general text-gray-700">Name</p>
+              <input type="text" placeholder="Your name" className="w-full ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-[8px] py-[4px] focus:ring-blue-500 focus:outline-none"/>
+            </div>
+            <div className="w-full">
+              <p className="text-label-S-general text-gray-700">Email</p>
+              <input type="text" placeholder="Your email" className="w-full ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-[8px] py-[4px] focus:ring-blue-500 focus:outline-none"/>
+            </div>
+          </div>
+          <div className="w-full pt-[8px]">
+            <p className="text-label-S-general text-gray-700">Subject</p>
+            <input type="text" placeholder="Subject" className="w-full ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-[8px] py-[4px] focus:ring-blue-500 focus:outline-none"/>
+          </div>
+          <div className="w-full pt-[8px]">
+            <p className="text-label-S-general text-gray-700">Message</p>
+            <textarea placeholder="Your message" className="w-full min-h-[120px] ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-[8px] py-[4px] focus:ring-blue-500 focus:outline-none"/>
+          </div>
         </div>
       </div>
+      
 
     </div>
   );
