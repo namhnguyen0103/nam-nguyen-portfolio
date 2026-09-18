@@ -31,29 +31,29 @@ export default function CopyLinkButton({ link }: CopyLinkButtonProps) {
       className='cursor-copy'
     >
         <div className={
-            clsx("group flex items-center px-[8px] py-[2px] ring-inset ring-1 rounded gap-[4px]",
+            clsx("group flex items-center px-2 py-0.5 ring-inset ring-1 rounded gap-1",
                 {
                     "ring-gray-200": copied === false,
-                    "ring-blue-400": copied === true
+                    "ring-blue-500": copied === true
                 }
             )
         }>
             <span className={clsx("material-symbols-rounded",
                 {
                     "text-gray-800 group-hover:text-gray-900": copied === false,
-                    "text-blue-700": copied === true
+                    "text-blue-500": copied === true
                 }
             )} style={{ fontSize: '12px', fontVariationSettings: "'opsz' 24" }}>mail</span>
             <p className={
                 clsx("text-label-S-general",
                     {
                         "text-gray-800 group-hover:text-gray-950": copied === false,
-                        "text-blue-800": copied === true
+                        "text-blue-600": copied === true
                     }
                 )}>namhnguyen0103@gmail.com</p>
             {
             copied 
-            ?   <span className="material-symbols-rounded text-blue-700" style={{ fontSize: '12px', fontVariationSettings: "'opsz' 24" }}>check</span>
+            ?   <span className="material-symbols-rounded text-blue-500" style={{ fontSize: '12px', fontVariationSettings: "'opsz' 24" }}>check</span>
             :   <span className="material-symbols-rounded text-gray-700 group-hover:text-gray-900" style={{ fontSize: '12px', fontVariationSettings: "'opsz' 24" }}>content_copy</span>
             }
         </div>

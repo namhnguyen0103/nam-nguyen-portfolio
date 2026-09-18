@@ -1,6 +1,5 @@
 'use client'
 
-import clsx from 'clsx';
 import { useState } from 'react';
 
 type AccordionCardProps = {
@@ -17,10 +16,10 @@ export default function AccordionCard({ header, content } : AccordionCardProps) 
     
     return (
         <button className='w-full group cursor-pointer' onClick={userClick}>
-            <div className='py-[16px] px-[16px] rounded-xl ring-[2px] ring-gray-50 ring-inset'>
+            <div className='relative py-4 px-4 rounded-xl ring-2 ring-gray-50 ring-inset'>
                 <div>{header}</div>
                 <div className={expanded ? "block" : "hidden"}>{content}</div>
-                <span className="absolute material-symbols-rounded text-gray-700 leading-[16px] top-[16px] right-[20px]" style={{ fontSize: '20px', fontVariationSettings: "'opsz' 20" }}>{expanded ? "collapse_all" : "expand_all"}</span>
+                <span className="absolute material-symbols-rounded text-gray-700 leading-4 top-4 right-5" style={{ fontSize: '20px', fontVariationSettings: "'opsz' 20" }}>{expanded ? "collapse_all" : "expand_all"}</span>
             </div>
         </button>
     );

@@ -1,31 +1,35 @@
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import Image from 'next/image';
 import Link from "next/link";
-import CopyLinkButton from "./ui/home/copy-link-button";
-import PillLink from "./ui/home/pill-link";
-import AccordionCard from "./ui/home/accordion-card";
-import ProjectCard from "./ui/home/project-card";
+import CopyLinkButton from "./ui/components/copy-link-button";
+import PillLink from "./ui/components/pill-link";
+import AccordionCard from "./ui/components/accordion-card";
+import ProjectCard from "./ui/components/project-card";
+import Button from "./ui/components/button";
+import ContactForm from "./ui/components/contact-form";
 import { projects } from "@/lib/projects";
 
 export default function Home() {
   return (
-    <div className="w-full max-w-[504px] mx-auto pt-[120px] gap-0">
+    <div className="w-full max-w-126 mx-auto pt-30 gap-0 mb-8">
       {/* HEADER SECTION */}
-      <div className="mb-[32px]">
-        <p className="text-orange-500 text-title-M-brand">SOFTWARE DEVELOPER</p>
-        <h1 className={`text-display-S-brand mb-[12px]`}>Nam Hoang Nguyen</h1>
-        <p className="text-gray-800 text-body-L-general mb-[16px]">Welcome to my home on the internet! I’m a software developer that is passionate about exploring both the technical and creative sides of programming. </p>
-        <div className="gap-[4px]">
-          <div className="flex items-center gap-[8px]">
-            <span className="material-symbols-rounded text-gray-500 leading-[16px]" style={{ fontSize: '16px', fontVariationSettings: "'opsz' 20" }}>school</span>
+      <div>
+        <p className="text-title-M-brand">
+          <span className="text-blue-500">SOFTWARE ENGINEER</span> + <span className="text-orange-500">UI/UX DESIGN</span>
+        </p>
+        <h1 className={`text-display-S-brand`}>Nam Hoang Nguyen</h1>
+        <p className="text-gray-800 text-body-L-general mt-3">Welcome to my home on the internet! I’m a software developer that is passionate about exploring both the technical and creative sides of programming. </p>
+        <div className="gap-1 mt-4">
+          <div className="flex items-center gap-2">
+            <span className="material-symbols-rounded text-gray-500 leading-4" style={{ fontSize: '16px', fontVariationSettings: "'opsz' 20" }}>school</span>
             <p className="text-body-S-general text-gray-700">UMass Amherst (B.S & M.S Computer Science)</p>
           </div>
-          <div className="flex items-center gap-[8px] pb-[16px]">
-            <span className="material-symbols-rounded text-gray-500 leading-[16px]" style={{ fontSize: '16px', fontVariationSettings: "'opsz' 20" }}>location_on</span>
+          <div className="flex items-center gap-2">
+            <span className="material-symbols-rounded text-gray-500 leading-4" style={{ fontSize: '16px', fontVariationSettings: "'opsz' 20" }}>location_on</span>
             <p className="text-body-S-general text-gray-700">Amherst, MA</p>
           </div>
         </div>
-        <div className="flex items-center gap-[8px]">
+        <div className="flex items-center mt-4 gap-2">
           <PillLink 
             href={"https://github.com/namhnguyen0103"} 
             label={"namhnguyen0103"} 
@@ -47,17 +51,17 @@ export default function Home() {
       </div>
 
       {/* PROJECT SECTION */}
-      <div className="mb-[32px]">
-          <h2 className="text-title-L-brand mb-[16px]">My Projects</h2>
-          <div className="flex flex-col gap-[8px]">
+      <div className="mt-8">
+          <h2 className="text-title-L-brand">My Projects</h2>
+          <div className="flex flex-col mt-4 gap-2">
             {projects.map((proj) => <ProjectCard key={proj.name} name={proj.name} description={proj.description} img={proj.img} tags={proj.tags}/>)}
           </div>
       </div>
 
       {/* WORK EXPERIENCE SECTION */}
-      <div className="mb-[32px]">
-        <h2 className="text-title-L-brand mb-[16px]">Work Experience</h2>
-        <div className="flex flex-col gap-[8px]">
+      <div className="mt-8">
+        <h2 className="text-title-L-brand">Work Experience</h2>
+        <div className="flex flex-col mt-4 gap-2">
           <AccordionCard 
           header={
             <div>
@@ -104,48 +108,54 @@ export default function Home() {
       </div>
 
       {/* CONTACTS SECTION */}
-      <div className="mb-[32px]">
-        <h2 className="text-title-L-brand mb-[16px]">Contacts</h2>
-        <div className="flex gap-[12px] items-end mb-[16px]">
-          <div className="relative w-[96px] h-[120px] rounded-t-full overflow-hidden">
+      <div className="mt-8">
+        <h2 className="text-title-L-brand">Contacts</h2>
+        <div className="flex gap-3 items-end mt-4">
+          <div className="relative w-24 h-30 rounded-xl overflow-hidden">
             <Image src="/Nam_Nguyen_Headshot.jpg" fill alt="Headshot" className="object-cover"/>
           </div>
           <div>
-            <p className="text-body-M-general text-gray-800 mb-[12px]">Reach out for anything!</p>
+            <p className="text-body-M-general text-gray-800 mb-3">Reach out for anything!</p>
             <Link href={"https://www.google.com"}>
-              <div className="flex gap-[8px] items-center">
+              <div className="flex gap-2 items-center">
                 <span className="material-symbols-rounded text-gray-700" style={{ fontSize: '12px', fontVariationSettings: "'opsz' 24" }}>mail</span>
                 <p className="text-body-S-general text-gray-800">namhnguyen0103@gmail.com</p>
               </div>
             </Link>
             <Link href={"https://www.google.com"}>
-              <div className="flex gap-[8px] items-center">
+              <div className="flex gap-2 items-center">
                 <IoLogoLinkedin className="text-gray-700 text-[12px]"/>
                 <p className="text-body-S-general text-gray-800">namnguye</p>
               </div>
             </Link>
           </div>
         </div>
-        <div className="px-[20px] py-[16px] rounded-xl bg-gray-20 ring-[1px] ring-gray-50">
-          <div className="flex w-full gap-[12px]">
+        {/* <div className="px-5 py-4 mt-4 rounded-xl bg-gray-20 ring-[1px] ring-gray-50">
+          <div className="flex w-full gap-3">
             <div className="w-full">
               <p className="text-label-S-general text-gray-700">Name</p>
-              <input type="text" placeholder="Your name" className="w-full ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-[8px] py-[4px] focus:ring-blue-500 focus:outline-none"/>
+              <input type="text" placeholder="Your name" className="w-full ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-2 py-1 focus:ring-blue-500 focus:outline-none"/>
             </div>
             <div className="w-full">
               <p className="text-label-S-general text-gray-700">Email</p>
-              <input type="text" placeholder="Your email" className="w-full ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-[8px] py-[4px] focus:ring-blue-500 focus:outline-none"/>
+              <input type="text" placeholder="Your email" className="w-full ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-2 py-1 focus:ring-blue-500 focus:outline-none"/>
             </div>
           </div>
-          <div className="w-full pt-[8px]">
+          <div className="w-full pt-2">
             <p className="text-label-S-general text-gray-700">Subject</p>
-            <input type="text" placeholder="Subject" className="w-full ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-[8px] py-[4px] focus:ring-blue-500 focus:outline-none"/>
+            <input type="text" placeholder="Subject" className="w-full ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-2 py-1 focus:ring-blue-500 focus:outline-none"/>
           </div>
-          <div className="w-full pt-[8px]">
+          <div className="w-full pt-2">
             <p className="text-label-S-general text-gray-700">Message</p>
-            <textarea placeholder="Your message" className="w-full min-h-[120px] ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-[8px] py-[4px] focus:ring-blue-500 focus:outline-none"/>
+            <textarea placeholder="Your message" className="w-full min-h-30 ring-[1px] ring-gray-200 rounded text-label-S-general text-gray-950 placeholder-gray-400 px-2 py-1 focus:ring-blue-500 focus:outline-none"/>
           </div>
-        </div>
+          <div className="flex justify-end">
+            <Button variant="primary-blue" size="small">
+              Send Message
+            </Button>
+          </div>
+        </div> */}
+        <ContactForm />
       </div>
       
 

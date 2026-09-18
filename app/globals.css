@@ -22,12 +22,12 @@
   --color-gray-700: #595959;
   --color-gray-800: #404040;
   --color-gray-900: #383838;
-  --color-gray-950: #383838;
+  --color-gray-950: #1A1A1A;
 
   --color-blue-50: #F4F9FF;
   --color-blue-100: #E3F0FF;
   --color-blue-200: #BDD8FD;
-  --color-blue-300: #BDD8FD;
+  --color-blue-300: #61A1FA;
   --color-blue-400: #308AF8;
   --color-blue-500: #0C74E4;
   --color-blue-600: #026ADA;
@@ -39,11 +39,11 @@
   --color-orange-50: #FFF8F5;
   --color-orange-100: #FFE3DA;
   --color-orange-200: #FFBEA8;
-  --color-orange-300: #FF9977;
-  --color-orange-400: #FF7445;
-  --color-orange-500: #FF4507;
-  --color-orange-600: #F53B00;
-  --color-orange-700: #D91F00;
+  --color-orange-300: #FE9A78;
+  --color-orange-400: #F8774C;
+  --color-orange-500: #F2460D;
+  --color-orange-600: #EC3F09;
+  --color-orange-700: #D72102;
   --color-orange-800: #A60000;
   --color-orange-900: #730000;
   --color-orange-950: #400000;
@@ -66,116 +66,97 @@ body {
   .text-display-L-brand {
     @apply text-[64px] leading-[80px] font-brand font-semibold;
   }
-
   .text-display-M-brand {
     @apply text-[48px] leading-[60px] font-brand font-semibold;
   }
-
   .text-display-S-brand {
     @apply text-[40px] leading-[52px] font-brand font-semibold;
   }
-
   .text-headline-L-brand {
     @apply text-[32px] leading-[40px] font-brand font-semibold;
   }
-
   .text-headline-M-brand {
     @apply text-[28px] leading-[36px] font-brand font-semibold;
   }
-
   .text-headline-S-brand {
     @apply text-[24px] leading-[32px] font-brand font-semibold;
   }
-
   .text-title-L-brand {
     @apply text-[20px] leading-[32px] font-brand font-semibold;
   }
-
   .text-title-M-brand {
     @apply text-[16px] leading-[24px] font-brand font-semibold;
   }
-
   .text-title-S-brand {
     @apply text-[14px] leading-[20px] font-brand font-semibold;
   }
-
   .text-body-L-brand {
     @apply text-[16px] leading-[24px] font-brand font-semibold;
   }
-
   .text-body-M-brand {
     @apply text-[14px] leading-[20px] font-brand font-semibold;
   }
-
   .text-body-S-brand {
     @apply text-[12px] leading-[16px] font-brand font-semibold;
   }
-
   .text-label-L-brand {
     @apply text-[14px] leading-[20px] font-brand font-semibold;
   }
-
   .text-label-M-brand {
     @apply text-[12px] leading-[16px] font-brand font-semibold;
   }
-
   .text-label-S-brand {
     @apply text-[10px] leading-[16px] font-brand font-semibold;
   }
-
   .text-display-L-general {
     @apply text-[64px] leading-[80px] font-sans font-normal;
   }
-
   .text-display-M-general {
     @apply text-[48px] leading-[60px] font-brand font-normal;
   }
-
   .text-display-S-general {
     @apply text-[40px] leading-[52px] font-brand font-normal;
   }
-
   .text-headline-L-general {
     @apply text-[32px] leading-[40px] font-sans font-normal;
   }
-
   .text-headline-M-general {
     @apply text-[28px] leading-[36px] font-sans font-normal;
   }
-
   .text-headline-S-general {
     @apply text-[24px] leading-[32px] font-sans font-normal;
   }
-
   .text-title-L-general {
     @apply text-[20px] leading-[32px] font-sans font-normal;
   }
-
   .text-title-M-general {
     @apply text-[16px] leading-[24px] font-sans font-medium;
   }
-
   .text-body-L-general {
     @apply text-[16px] leading-[24px] font-sans font-normal;
   }
-
   .text-body-M-general {
     @apply text-[14px] leading-[20px] font-sans font-normal;
   }
-
   .text-body-S-general {
     @apply text-[12px] leading-[16px] font-sans font-normal;
   }
-
   .text-label-L-general {
     @apply text-[14px] leading-[20px] font-sans font-medium;
   }
-
   .text-label-M-general {
     @apply text-[12px] leading-[16px] font-sans font-medium;
   }
-
   .text-label-S-general {
     @apply text-[10px] leading-[16px] font-sans font-medium;
+  }
+
+  .form-input {
+    @apply rounded ring-1 ring-inset ring-gray-200
+    px-2 py-1
+    font-sans text-gray-950
+    placeholder:text-gray-400
+    focus:ring-blue-500 focus:outline-none
+    disabled:cursor-not-allowed disabled:opacity-50;
   }
 }
