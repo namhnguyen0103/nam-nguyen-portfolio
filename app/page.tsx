@@ -50,14 +50,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* PROJECT SECTION */}
-      <div className="mt-8">
-          <h2 className="text-title-L-brand">My Projects</h2>
-          <div className="flex flex-col mt-4 gap-2">
-            {projects.map((proj) => <ProjectCard key={proj.name} name={proj.name} description={proj.description} img={proj.img} tags={proj.tags}/>)}
-          </div>
-      </div>
-
       {/* WORK EXPERIENCE SECTION */}
       <div className="mt-8">
         <h2 className="text-title-L-brand">Work Experience</h2>
@@ -105,6 +97,14 @@ export default function Home() {
             </div>
           } />
         </div>
+      </div>
+
+      {/* PROJECT SECTION */}
+      <div className="mt-8">
+          <h2 className="text-title-L-brand">My Projects</h2>
+          <div className="flex flex-col mt-4 gap-2">
+            {projects.map((proj) => <ProjectCard key={proj.name} name={proj.name} description={proj.description} img={proj.img} tags={proj.tags}/>)}
+          </div>
       </div>
 
       {/* CONTACTS SECTION */}
